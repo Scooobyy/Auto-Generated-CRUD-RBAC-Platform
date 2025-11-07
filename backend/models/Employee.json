@@ -1,0 +1,54 @@
+{
+  "name": "Employee",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    {
+      "name": "salary",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "name": "hireDate",
+      "type": "date"
+    },
+    {
+      "name": "isActive",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "ownerField": "managerId",
+  "rbac": {
+    "Admin": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "Manager": [
+      "create",
+      "read"
+    ],
+    "Viewer": [
+      "read"
+    ]
+  },
+  "tableName": "employees",
+  "createdAt": "2025-11-05T13:36:56.305Z",
+  "updatedAt": "2025-11-05T13:36:56.305Z"
+}

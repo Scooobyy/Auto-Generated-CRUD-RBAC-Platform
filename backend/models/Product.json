@@ -1,0 +1,60 @@
+{
+  "name": "Product",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "default": "",
+      "unique": false
+    },
+    {
+      "name": "price",
+      "type": "number",
+      "required": true,
+      "default": "0",
+      "unique": false
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "required": true,
+      "default": "general",
+      "unique": false
+    },
+    {
+      "name": "isActive",
+      "type": "boolean",
+      "required": false,
+      "default": "",
+      "unique": false
+    },
+    {
+      "name": "stockquantity",
+      "type": "integer",
+      "required": false,
+      "default": "0",
+      "unique": false
+    }
+  ],
+  "ownerField": null,
+  "rbac": {
+    "Admin": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "Manager": [
+      "create",
+      "read",
+      "update"
+    ],
+    "Viewer": [
+      "read"
+    ]
+  },
+  "tableName": "products",
+  "createdAt": "2025-11-07T13:59:44.839Z",
+  "updatedAt": "2025-11-07T13:59:44.839Z"
+}

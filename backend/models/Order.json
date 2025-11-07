@@ -1,0 +1,39 @@
+{
+  "name": "Order",
+  "fields": [
+    {
+      "name": "Price",
+      "type": "number",
+      "required": true,
+      "default": "",
+      "unique": false
+    },
+    {
+      "name": "Job",
+      "type": "boolean",
+      "required": true,
+      "default": "",
+      "unique": false
+    }
+  ],
+  "ownerField": null,
+  "rbac": {
+    "Admin": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "Manager": [
+      "create",
+      "read",
+      "update"
+    ],
+    "Viewer": [
+      "read"
+    ]
+  },
+  "tableName": "orders",
+  "createdAt": "2025-11-06T18:04:23.955Z",
+  "updatedAt": "2025-11-06T18:04:23.956Z"
+}
